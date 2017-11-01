@@ -1,0 +1,857 @@
+@charset "utf-8";
+/* CSS Document */
+/* 通用 */
+	input,button{outline:none;}
+	html{font-size: 62.5%;line-height: 1.5;}
+	html a{color: rgb(0, 0, 0);text-decoration: none;}
+	html,body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,p,span{margin: 0;padding: 0;}
+	li{list-style:none;}
+	input,button,textarea,submit{outline:none;}
+	.clearfix:after,.container-center:after{display: block;content: "";clear: both;}
+	::selection{background: #32c5d2;color: #fff;}
+	.dom-c{display: block;margin-left: auto;margin-right: auto;}
+/* 控制最大宽度居中 */
+	.container-center{
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+/* TOBO:全局响应通用 */
+/* header头部 */
+	.header-loginbar{
+		background: #333;
+	}
+	.header-loginbar p,.header-loginbar span,.header-loginbar a{
+		font-size: 1.4rem;
+		color: #aaa;
+		line-height: 3.8rem;
+	}
+	.header-loginbar p span{
+		display: none;
+	}
+	.header-loginbar p span a{
+		margin-left: 10px;
+	}
+	.header-loginbar p .header-icons{
+		float: right;
+		display: block;
+	}
+	.header-icons a:nth-of-type(n+4){
+		display: none;
+	}
+	.logo-nav{
+		background: #fff;
+		padding-top: 26px;
+		padding-bottom: 26px;
+	}
+	.logo-nav .header-logo-img img{
+		width: 253px;
+	}
+	.logo-nav .header-logo-img img[src$="w.png"]{
+		display: none;
+	}
+	.logo-nav nav{
+		float: right;
+	}
+	.logo-nav nav ul{
+		display: none;
+	}
+	.header-nav-minbtn i{
+		font-size: 3rem;
+		line-height: 5.6rem;
+		color: #aaa;
+	}
+	.logo-nav nav li{
+		position: relative;
+		float: left;
+		margin-left: 10px;
+		padding:0 10px;
+	}
+	.logo-nav nav li a{
+		line-height: 56px;
+	}
+	.logo-nav nav li>span{
+		position: relative;
+		border: 3px solid #eab830;
+		padding: 4px 8px;
+		margin-top: 20px;
+		line-height: 5.6rem;
+		transition: .35s;
+	}
+	.logo-nav nav li>span i{
+		position: relative;
+		color: #eab830;
+		transition: .35s;
+		z-index: 3;
+	}
+	.logo-nav nav li>span b{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background: #eab830;
+		transition: .5s;
+	}
+	.logo-nav nav li>span:hover b{
+		width: 100%;
+	}
+	.logo-nav nav li>span:hover>i{
+		color: #fff;
+	}
+	.logo-nav nav .title-hr{
+		margin: 0 ;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		margin-left: -20px;
+	}
+	.logo-nav nav ul li + li .title-hr{
+		display: none;
+	}
+	.logo-nav nav ul li:hover .title-hr{
+		display: block;
+	}
+/* screen巨幕 */
+		.screen{
+			display: none;
+		}
+		.screen a img{
+			display: none;
+		}
+/* 内容中的主要title标题 */
+	.cont-title-main{
+		text-align: center;
+	}
+	.cont-title-main h2{
+		font-size: 3.2rem;
+		padding-top: 45px;
+		margin-bottom: 10px;
+	}
+	.title-hr{
+		position: relative;
+		width: 40px;
+		border-top: 3px solid #eab830;
+		margin: 18px auto;
+	}
+	.title-hr span{
+		position: absolute;
+		top: -6px;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 3px solid transparent;
+		border-bottom:3px solid #eab830;
+		border-top:0;
+		margin-left:-3px;
+	}
+/* container主要内容 */
+	/* 优势 */
+		.myadvantage .container-center{
+			padding: 0;
+			color: rgb(255, 255, 255);
+		}
+		.myadvantage div div{
+			box-sizing: border-box;
+			padding: 30px 32px;
+		}
+		.myadvantage div div:nth-of-type(1){
+			background: #10c45c;
+		}
+		.myadvantage div div:nth-of-type(2){
+			background: #fdc735;
+		}
+		.myadvantage div div:nth-of-type(3){
+			background: #307ad5;
+		}
+		.myadvantage div div:nth-of-type(4){
+			background: #e948ae;
+		}
+		.myadvantage div div i{
+			font-size: 7.3rem;
+		}
+		.myadvantage div div h3{
+			font-size: 1.8rem;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+	/* 热门课程 */
+		.coursehot-box ul li{
+
+
+		}
+		.coursehot-box ul li>div{
+			width: 270px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
+			margin-bottom: 30px;
+			border: 1px solid #ccc;
+
+		}
+		.coursehot-box ul li:nth-of-type(2){
+			display: none;
+		}
+		.coursehot-box ul li .coursehot-entity-img{
+			position: relative;
+		}
+		.coursehot-box ul li .coursehot-entity-img span{
+			position: absolute;
+			top: 13px;
+			left: 0;
+			background: #eab830;
+			padding: 11px 16px;
+			color: rgb(255, 255, 255);
+			border-radius: 0 5px 5px 0;
+			box-shadow: 1px 1px 3px 0 #555;
+		}
+		.coursehot-box ul li .coursehot-entity-img img{
+			width: 100%;
+		}
+		.coursehot-box ul li .coursehot-entity-text{
+			padding: 14px 13px 7px;
+		}
+		.coursehot-box ul li .coursehot-entity-text h3{
+			font-size: 1.6rem;
+			font-weight: 500;
+			color: #333;
+			margin-bottom: 4px;
+		}
+		.coursehot-box ul li .coursehot-entity-text p{
+			color: #555;
+		}
+		.coursehot-box ul li .coursehot-entity-details {
+			padding: 10px 13px 7px;
+			border-top: 1px solid #ccc;
+			color:#555;
+		}
+		.coursehot-box ul li .coursehot-entity-details .star-right{
+			float: right;
+			color: #eab830;
+		}
+		.coursehot-box ul li .coursehot-entity-details span,.coursehot-box ul li .coursehot-entity-details span i{
+			margin-right: 5px;
+		}
+		.coursehot-box ol{
+			text-align: center;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.coursehot-box ol li{
+			display: inline-block;
+			border-radius: 50%;
+			border: 3px solid #ccc;
+			width: 8px;
+			height: 8px;
+			margin: 5px;
+			box-shadow: 0 0 3px  0 #ccc;
+		}
+		.coursehot-box ol .coursehot-olon{
+			border: 3px solid #48a7d4;
+			box-shadow: 0 0 3px  0 #48a7d4;
+		}
+	/* 我们一直在努力 */
+		.achievement{
+			background: #bfbfbf;
+			color: rgb(255, 255, 255);
+			padding-bottom: 45px;
+			text-align: center;
+		}
+		.achievement .cont-title-main p{
+			font-size: 1.6rem;
+		}
+		.achievement-box div{
+			padding: 30px 0;
+		}
+		.achievement-box div>i{
+			font-size: 6.5rem;
+		}
+		.achievement-box div>h4{
+			font-size: 5rem;
+			color: #eab830;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		.achievement-box div>p{
+			font-size: 1.4rem;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-weight: 800;
+		}
+		.achievement-foot{
+			display: inline-block;
+			border: 2px solid #fff;
+		}
+		.achievement-foot i{
+			font-size: 2rem;
+			border-right: 2px solid #fff;
+			padding:6px 10px;
+			vertical-align: middle;
+		}
+		.achievement-foot span{
+			padding: 6px 30px;
+		}
+		.achievement-foot:hover{
+			color: #eab830;
+			border-color: #eab830;
+		}
+		.achievement-foot:hover i{
+			border-color: #eab830;
+		}
+	/* 我们的博客  */
+		.blogs{
+			padding-bottom: 40px;
+		}
+		.blogs-box ul li{
+			color: #333;
+		}
+		.blogs-box ul li{
+			position: relative;
+			padding-top: 70px;
+			margin-top: 30px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.blogs-box-date{
+			position: absolute;
+			top: 0;
+			left: 15px;
+			width: 50px;
+			border: 2px solid #eab830;
+			text-align: center;
+			font-size: 2rem;
+			color:#eab830;
+		}
+		.blogs-box ul li h3{
+			font-size: 1.8rem;
+			font-weight: 500;
+			margin-bottom: 10px;
+		}
+		.blogs-box ul li>p{
+			font-size: 1.4rem;
+			color: #555;
+		}
+		.blogs-box-date p{
+			font-size: 1.2rem;
+			color:#eab830;
+		}
+		.blogs-box ul li p a{
+			color: #48a7d4;
+		}
+		.blogs-hr{
+			width: 30px;
+			border-top: 4px solid #eab830;
+			margin: 15px 0;
+		}
+	/* 加入我们 */
+		.joinus{
+			background: #f5f5f5;
+			padding-bottom: 40px;
+		}
+		.joinus-text{
+			position: relative;
+			padding-left: 100px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			padding-right: 20px;
+		}
+		.joinus-text>i{
+			position: absolute;
+			top: 50px;
+			left: 10px;
+			font-size: 6rem;
+			color:#555;
+		}
+		.joinus-text>h4{
+			font-size: 1.8rem;
+			margin-bottom: 10px;
+		}
+		.joinus-text>h4 span{
+			color: #48a7d4;
+		}
+		.joinus-text>p{
+			color: #333;
+		}
+		.joinus-text>p a{
+			color: #48a7d4;
+		}
+		.joinus-group-num{
+			text-align: center;
+			font-size: 1.8rem;
+			color: #48a7d4;
+		}
+		.joinus-group-num a{
+			color: #48a7d4;
+		}
+	/* 在这里可与学到 */
+		.objective .container-center{
+			padding: 0;
+		}
+		.objective-top{
+			background: #555;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.objective-top .container-center>div{
+			float: left;
+			width: 40%;
+			margin-left: 8%;
+			background: #eab830;
+			text-align: center;
+			padding-top: 20px;
+		}
+		.objective-top>div+div{
+			margin: 0 8% 0 4%;
+		}
+		.objective-top>div p{
+			font-size: 1.4rem;
+			margin: 20px 0;
+			color: #fff;
+		}
+		.objective-under{
+			margin: 0 15px;
+			color: #000;
+			padding:80px  30px;
+			box-sizing: border-box;
+			background: #eab830;
+			text-align: center;
+		}
+		.objective-under h2{
+			font-size: 3.6rem;
+		}
+		.objective-under h2 span {
+			color: #fff;
+		}
+		.objective-under p {
+			font-size: 1.8rem;
+			font-weight: 800;
+		}
+		.objective-under h3 {
+			font-size: 3.2rem;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.objective-under .title-hr {
+			border-color: #fff;
+		}
+		.objective-under .title-hr span{
+			border-bottom-color: #fff;
+		}
+	/* 学员评价与视频 */
+		.evaluate{padding:40px 0;}
+		.evaluate-block ul li{
+
+		}
+		.evaluate h3{
+			font-size: 3.2rem;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #ccc;
+		}
+		.evaluate-block h3 span{
+			float: right;
+		}
+		.evaluate-block h3 span button{
+			width: 40px;
+			background: #fff;
+			border-style: solid;
+			border-color: #eab830;
+			color: #eab830;
+		}
+		.evaluate-block h3 span button+button{
+			border-left: 0;
+		}
+		.evaluate-block h3 span button:hover{
+			background: #eab830;
+			color: #fff;
+		}
+		.evaluate ul li p{
+			font-size: 1.6rem;
+			padding-left: 20px;
+		}
+		.evaluate ul li .blogs-hr{
+			margin-left: 20px;
+		}
+		.evaluate ul li .blogs-hr+p{
+			padding-left: 0;
+		}
+		.evaluate ul li>p~p{
+			font-size: 1.4rem;
+			color: #aaa;
+		}
+		.evaluate ul li+li{
+			display: none;
+		}
+	/* footer页尾 */
+		.footer-menu{
+			color: #fff;
+			background: #414b4f;
+			padding-top: 63px;
+			padding-bottom: 30px;
+		}
+		.footer-menu a{
+			color: #fff;
+		}
+		.footer-menu a:hover{
+			color: #eab830;
+		}
+		.footer-menu ul li{
+			margin: 10px 0;
+		}
+		.footer-menu-box>div{
+			padding-bottom: 15px;
+			margin-bottom: 20px;
+		}
+		.footer-menu h4{
+			font-size: 1.8rem;
+			margin-bottom: 25px;
+		}
+
+		.footer-menu-site ul li{
+			margin: 5px 0;
+		}
+		.footer-menu-site ul li a{
+			display: block;
+			padding: 5px 0;
+		}
+		.footer-menu-site ul li a i{
+			margin-right: 10px;
+			color: #eab830;
+		}
+		.footer-menu-site ul li+li a{
+			border-top: 1px solid #888;
+		}
+		.footer-menu-contact ul li{
+			margin: 15px 0;
+		}
+
+		.footer-menu-contact ul li i{
+			font-size: 2rem;
+			color: #aaa;
+			margin-right: 20px;
+			vertical-align: middle;
+		}
+		.footer-menu-workday ul li {
+			margin:0;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.footer-menu-workday ul li:hover {
+			color: #10c45c;
+		}
+		.footer-menu-workday ul li+li {
+			border-top: 1px dashed #888;
+		}
+		.footer-menu-workday ul span,.footer-menu-workday ul b{
+			float: right;
+		}
+		.footer-menu-workday ul b{
+			color: #fff;
+			background: #f13e3e;
+			border-radius: 5px;
+			padding: 2px 10px;
+		}
+		.footer-under-bar-copy img{
+			vertical-align: middle;
+			display: none;
+		}
+		.footer-under-bar-copy span{
+			font-size: 1.4rem;
+		}
+		.footer-under-bar-link-nav{
+			display: none;
+		}
+		.footer-under-bar-link-icon a{
+			font-size: 1.6rem;
+			margin: 10px;
+		}
+/* TOBO:<=320 */
+@media only screen and (max-width:321px){
+	body,.wrapper-main{width: 320px;}
+	/* header头部 */
+
+	/* screen巨幕 */
+
+	/* container主要内容 */
+
+	/* footer页尾 */
+}
+/* TOBO:<780 */
+@media only screen and (min-width:779px){
+	html{font-size: 50%;}
+	/* header头部 */
+		.header-loginbar p{
+			float: right;
+		}
+		.header-loginbar p span{
+			float: left;
+			display: inline;
+			margin-left: 20px;
+		}
+		.header-loginbar p .header-login-btn{
+			float: right;
+		}
+		.header-loginbar p .header-login-btn i{
+			margin-right: 10px;
+		}
+		.header-loginbar p .header-login-btn a+a{
+			border-left: 1px solid #ccc;
+			padding-left: 10px;
+			margin-left: 10px;
+		}
+		.header-loginbar p span a{
+			margin-left: 10px;
+		}
+		.header-loginbar p .header-icons{
+			float: left;
+			display: block;
+		}
+		.header-icons a:nth-of-type(n+4){
+			display: inline;
+		}
+	/* screen巨幕 */
+		.screen,.screen a{
+			position: relative;
+			display: block;
+		}
+		.screen img{
+			width: 100%;
+		}
+		.screen button{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 43px;
+			height: 100px;
+			margin-top: -50px;
+			background: rgba(0,0,0,.4);
+			border: 0;
+			color: #fff;
+			font-size: 5rem;
+		}
+		.screen button{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 43px;
+			height: 100px;
+			margin-top: -50px;
+			background: rgba(0,0,0,.6);
+			border: 0;
+		}
+		.screen button+button{
+			left: auto;
+			right: 0;
+		}
+		.screen>a img[src$="0.jpg"]{
+			display: block;
+		}
+	/* container主要内容 */
+		/* 优势 */
+		.myadvantage{
+			position: relative;
+			margin-top: -30px;
+			z-index: 2;
+		}
+		.myadvantage div div{
+			float: left;
+			width: 25%;
+		}
+		.myadvantage div div p{
+			min-height: 200px;
+		}
+		/* 热门课程 */
+		.coursehot-box ul{
+			margin: 40px 0;
+		}
+		.coursehot-box ul li{
+			float: left;
+			width: 40%;
+			margin: 0 5%;
+			box-sizing: border-box;
+		}
+		.coursehot-box> ul li>div{
+			width: 270px;
+		}
+		.coursehot-box ul li:nth-of-type(2){
+			display: block;
+		}
+		.coursehot-box ol{
+			display: none;
+		}
+		/* 我们一直在努力 */
+		.achievement-box>div{
+			float: left;
+			width: 25%;
+			box-sizing: border-box;
+		}
+		/* 我们的博客 */
+		.blogs-box ul{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+		}
+		.blogs-box ul li{
+			flex: 1;
+		}
+		/* 加入我们 */
+		.joinus div div{
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+		}
+		.joinus-group-num{
+			padding: 50px 20px;
+		}
+		/* 评价与视频 */
+		.evaluate div>div{
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			padding: 0 20px;
+		}
+	/* footer页尾 */
+		.footer-menu-box>div{
+			float: left;
+			width: 50%;
+			box-sizing: border-box;
+			padding: 30px 20px;
+		}
+		.footer-under-bar-copy img{
+			display: inline-block;
+		}
+		.footer-under-bar-copy{
+			float: left;
+		}
+		.footer-under-bar-link{
+			float: right;
+		}
+}
+/* TOBO:<1000 */
+@media only screen and (min-width:999px){
+	html{font-size: 50%;}
+/* 定宽控制内容居中 */
+	.container-center{
+		width: 1000px;
+		box-sizing: border-box;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+/* header头部 */
+	.logo-nav{
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		background: transparent;
+		z-index: 99;
+	}
+	.logo-nav ul li a{
+		color: #fff;
+	}
+	.header-nav-minbtn{
+		display: none;
+	}
+	.logo-nav nav ul{
+		display: block;
+	}
+	.logo-nav .header-logo-img img[src$="w.png"]{
+		display: inline;
+	}
+	.logo-nav .header-logo-img img[src$="b.png"]{
+		display: none;
+	}
+	/* screen巨幕 */
+		.screen>a img[src$="0.jpg"]{
+			display: none;
+		}
+		.screen>a img[src$="1.gif"]{
+			display: block;
+		}
+	/* container主要内容 */
+		.container{
+		position: relative;
+		margin-bottom: 400px;
+		z-index: 2;
+		background: #fff;
+		}
+	/* 优势 */
+		.myadvantage{
+			margin-top: -50px;
+		}
+	/* 评论与视频 */
+		.evaluate{
+			padding-bottom: 140px;
+		}
+		.evaluate div>div{
+			width: 65%;
+		}
+		.evaluate div>div+div{
+			width: 35%;
+		}
+		.evaluate ul li{
+			float: left;
+		}
+		.evaluate ul li+li{
+			display: block;
+			margin-left: 30px;
+		}
+	/* footer页尾 */
+		.footer-menu{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+		.footer-menu-box>div{
+			float: left;
+			width: 25%;
+			box-sizing: border-box;
+			padding: 30px 20px;
+		}
+		.footer-under-bar-copy img{
+			display: inline-block;
+			margin: 0 20px;
+		}
+		.footer-under-bar-copy{
+			float: left;
+		}
+		.footer-under-bar-copy span,.footer-under-bar-copy span a{
+			font-size: 1.4rem;
+			line-height: 3.6rem;
+		}
+		.footer-under-bar-link{
+			float: right;
+		}
+		.footer-under-bar-link-nav{
+			display: inline-block;
+		}
+		.footer-under-bar-link-nav a{
+			margin-right: 20px;
+			color: #fd7635;
+			line-height: 3.6rem;
+		}
+		.footer-under-bar-link-nav a+a{
+			color: #fff;
+		}
+		.footer-under-bar-link-nav a:hover{
+			color: #fd7635;
+		}
+}
+@media only screen and (min-width:1140px){
+	/* screen巨幕 */
+		.screen>a img[src$="0.jpg"]{
+			display: none;
+		}
+		.screen>a img[src$="1.gif"]{
+			display: none;
+		}
+		.screen>a img[src$="2.jpg"]{
+			display: block;
+		}
+}

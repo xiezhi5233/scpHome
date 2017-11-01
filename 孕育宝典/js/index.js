@@ -15,17 +15,20 @@ $.ajax({
 		Dates=data;
 	}
 })
-$(".container").on('click','a',function(e){
-	e.preventDefault();
-	var that = $(this).attr("href");
-	//点击时将nav按钮的href属性中的字符取出在下面获取内容盒子元素,赋予样式移动
-	$(that).css({//当点击首页时首页的href为#home,
+function tran(dom){
+	$(dom).css({//当点击首页时首页的href为#home,
 		transition:'all .3s',
 		transform:'translateX(0)'
 	}).siblings().css({//显示首页内容元素,隐藏其他的兄弟元素
 		transition:'all .3s',
 		transform:'translateX(100%)'
 	})
+}
+$(".container").on('click','a',function(e){
+	e.preventDefault();
+	var that = $(this).attr("href");
+	//点击时将nav按钮的href属性中的字符取出在下面获取内容盒子元素,赋予样式移动
+	tran(that);
 	//下面是nav的背景色移动功能
 	var idx = $(this).index();
 	if( this.parentNode.nodeName=='NAV' ){
@@ -50,13 +53,15 @@ function resetHead(dom){//传进来的是点击的元素节点
 		returns.on("click",function(){
 		$('header').find("h2").text("孕育宝典");
 			tran($(".home"))
-		})	}else if(href=='#history'){//历史记录
+		})
+		}else if(href=='#history'){//历史记录
 		returns.show()
 		$('header').find("h2").text("历史记录");
 		returns.on("click",function(){
 		$('header').find("h2").text("孕育宝典");
 			tran($(".home"))
-		})	}else if(href=='#home'){//首页
+		})
+		}else if(href=='#home'){//首页
 		$('header').find("h2").text("孕育宝典");
 		returns.hide()//显示返回按钮
 		search.show()//显示搜索按钮
@@ -83,8 +88,12 @@ function resetHead(dom){//传进来的是点击的元素节点
 	}else if(href=='#list_cont'){//首页>列表>内容文本
 		returns.show()//显示返回按钮
 		returns.on("click",function(){
-		$('header').find("h2").text("孕前准备");
+			$('header').find("h2").text("孕前准备");
 			tran($(".list"))
+			returns.on("click",function(){
+			$('header').find("h2").text("孕育宝典");
+			tran($(".home"))
+		})
 		})
 		var str =  dom.attr("id");
 		var arr = str.split("_");//分出数组,1是名字,2是下标
@@ -94,13 +103,5 @@ function resetHead(dom){//传进来的是点击的元素节点
 
 	}
 }
-function tran(dom){
-	$(dom).css({//当点击首页时首页的href为#home,
-		transition:'all .3s',
-		transform:'translateX(0)'
-	}).siblings().css({//显示首页内容元素,隐藏其他的兄弟元素
-		transition:'all .3s',
-		transform:'translateX(100%)'
-	})
-}
+
 
